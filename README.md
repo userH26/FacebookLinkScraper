@@ -117,9 +117,3 @@ The resulting CSV contains rich post information:
 | `https://www.facebook.com/MyNagad/posts/pfbid0xyz...` | `Monday 12 October 2026 at 18:30` | `1d` | `2026-10-12 18:30:00` |
 
 ---
-
-## Running Unit Tests
-
-```bash
-python -m unittest discover tests
-```
