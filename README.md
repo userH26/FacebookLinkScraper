@@ -24,6 +24,47 @@ A robust, modular Python scraper built on Playwright to extract permalinks and a
 
 ---
 
+## Installation
+
+### 1. Prerequisites
+- **Python 3.10+** (Python 3.8+ supported)
+- **Git**
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com/<your-username>/LinkScraper.git
+cd LinkScraper
+```
+
+### 3. Set Up Virtual Environment
+- **Linux / macOS**:
+  ```bash
+  python3 -m venv .venv
+  source .venv/bin/activate
+  ```
+- **Windows (PowerShell / CMD)**:
+  ```powershell
+  python -m venv .venv
+  .venv\Scripts\activate
+  ```
+
+### 4. Install Python Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Install Playwright Browser Binaries
+Playwright requires Chromium browser binaries to run:
+```bash
+playwright install chromium
+```
+> **Note for Linux users:** If required system dependencies are missing, run:
+> ```bash
+> playwright install-deps chromium
+> ```
+
+---
+
 ## Project Structure
 
 ```
@@ -36,6 +77,8 @@ LinkScraper/
 │   ├── url_cleaner.py        # Canonicalization & tracking removal
 │   ├── date_parser.py        # Relative & absolute date parsing
 │   └── exporter.py           # CSV, JSON, and TXT exporters
+├── tests/
+│   └── test_components.py    # Unit tests
 ├── backup/                   # Previous scripts archived safely
 ├── fb_session/               # Persistent browser session profile
 ├── main.py                   # Primary CLI and IDE run target
@@ -117,3 +160,9 @@ The resulting CSV contains rich post information:
 | `https://www.facebook.com/MyNagad/posts/pfbid0xyz...` | `Monday 12 October 2026 at 18:30` | `1d` | `2026-10-12 18:30:00` |
 
 ---
+
+## Running Unit Tests
+
+```bash
+python -m unittest discover tests
+```
