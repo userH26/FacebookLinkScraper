@@ -36,8 +36,6 @@ LinkScraper/
 │   ├── url_cleaner.py        # Canonicalization & tracking removal
 │   ├── date_parser.py        # Relative & absolute date parsing
 │   └── exporter.py           # CSV, JSON, and TXT exporters
-├── tests/
-│   └── test_components.py    # Unit tests
 ├── backup/                   # Previous scripts archived safely
 ├── fb_session/               # Persistent browser session profile
 ├── main.py                   # Primary CLI and IDE run target
