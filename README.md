@@ -32,8 +32,8 @@ A robust, modular Python scraper built on Playwright to extract permalinks and a
 
 ### 2. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/LinkScraper.git
-cd LinkScraper
+git clone https://github.com/userH26/FacebookLinkScraper.git
+cd FacebookLinkScraper
 ```
 
 ### 3. Set Up Virtual Environment
@@ -77,8 +77,6 @@ LinkScraper/
 │   ├── url_cleaner.py        # Canonicalization & tracking removal
 │   ├── date_parser.py        # Relative & absolute date parsing
 │   └── exporter.py           # CSV, JSON, and TXT exporters
-├── tests/
-│   └── test_components.py    # Unit tests
 ├── backup/                   # Previous scripts archived safely
 ├── fb_session/               # Persistent browser session profile
 ├── main.py                   # Primary CLI and IDE run target
@@ -161,8 +159,3 @@ The resulting CSV contains rich post information:
 
 ---
 
-## Running Unit Tests
-
-```bash
-python -m unittest discover tests
-```
